@@ -1,9 +1,9 @@
-'use client';
+'use client'; 
 
 import { useState } from 'react';
-import { getCommonCopy } from '@/lib/locales';
+import { getCommonCopy } from '@liblocales'; 
 
-export default function ApiKeyModal({ onSave, onClose, overlay = false, title, subtitle, locale = 'en' }) {
+export default function ApikeyModal ({ onSave, onClose, overlay = false, title, subtitle, locale = 'en' }) {
   const [key, setKey] = useState('');
   const [error, setError] = useState('');
   const copy = getCommonCopy(locale).apiKeyModal;
@@ -43,7 +43,7 @@ export default function ApiKeyModal({ onSave, onClose, overlay = false, title, s
           <h1 className="text-xl font-bold text-white tracking-tight mb-2">
             {title || copy.title}
           </h1>
-          <p className="text-white/40 text-[13px] leading-relaxed px-4">
+          <p className="text-white/40 text- [13px] leading-relaxed px-4"> 
             {subtitle || (
               <>{copy.subtitlePrefix} <a href="https://muapi.ai/access-keys" target="_blank" rel="noreferrer" className="text-[#22d3ee] hover:text-[#e5ff33] transition-colors">Muapi.ai</a> {copy.subtitleSuffix}</>
             )}
